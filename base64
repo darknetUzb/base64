@@ -1,0 +1,39 @@
+import hashlib
+import base64
+import os, sys
+
+def darknet():
+	if sys.platform == "win32":
+		os.system("cls")
+	else:
+		os.system("clear")
+darknet()		
+a = """\033[1;32m
+██████╗░░█████╗░░██████╗███████╗░░░░░░█████╗░░░██╗██╗          
+██╔══██╗██╔══██╗██╔════╝██╔════╝░░░░░██╔═══╝░░██╔╝██║              
+██████╦╝███████║╚█████╗░█████╗░░░░░░░██████╗░██╔╝░██║          
+██╔══██╗██╔══██║░╚═══██╗██╔══╝░░░░░░░██╔══██╗███████║            
+██████╦╝██║░░██║██████╔╝███████╗░░░░░╚█████╔╝╚════██║             
+╚═════╝░╚═╝░░╚═╝╚═════╝░╚══════╝░░░░░░╚════╝░░░░░░╚═╝          
+
+"""
+b = """
+[*] программист: @darknet_off1cial 
+[*] наш канал: @soft_wb
+[*] басе64 энкодироват и декодироват
+"""
+print(a, b)
+dark = input("""[*] криптографический скрипт
+
+[1] энкодировать
+[2] декодировать
+""")
+while True:
+	if dark == '1':
+		string = input('энкоде: ')
+		string_encode = string.encode('utf-8')
+		encoded = base64.b64encode(string_encode, altchars=b'-:')
+		print(encoded)
+	if dark == '2':
+	 code_string = input("[*] декоде:")
+	 print(base64.b64decode(code_string))
